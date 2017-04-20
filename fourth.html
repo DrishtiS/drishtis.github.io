@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+body{
+	background-image:url("https://media.giphy.com/media/PJdFVcuodsldm/giphy.gif");
+background-size:cover;
+	color:white;
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+.material-icons {
+float:right;
+vertical-align:-1%
+size:30px;
+color:white;
+}
+</style>
+<body>
+<a href="index.html"><i class="material-icons">home</i><a>
+<div class="w3-container">
+<center> <p style="color:white; font-size:40px;">Plays</p></center>
+  
+</div>
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+ <a href="r.html"><img class="mySlides" src="https://storage.googleapis.com/ehimages/2017/4/20/img_4658b9a109d97a0fd8d2ab5c1c23d831_1492690141713_original.jpg" style="width:100%"></a>
+ <a href="lll.html"><img class="mySlides" src="https://storage.googleapis.com/ehimages/2017/3/21/img_9494c3697f373a7f996b5f537c2a79c7_1490102909725_processed_original.jpg" style="width:100%"></a>
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+	Click to see the review
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html> 
